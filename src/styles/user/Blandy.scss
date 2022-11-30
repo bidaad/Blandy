@@ -1,0 +1,665 @@
+@font-face {
+    font-family: irsans;
+    src: url(../fonts/irsans/IRANSans-Light.woff) format("woff"),
+        url(../fonts/irsans/IRANSans-Light.woff2) format("woff2"),
+        url(../fonts/irsans/IRANSans-Light.ttf) format("truetype"),
+        url(../fonts/irsans/IRANSans-Light.eot) format("eot");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: irsans;
+    src: url(../fonts/irsans/IRANSans.woff) format("woff"), url(../fonts/irsans/IRANSans.woff2) format("woff2"),
+        url(../fonts/irsans/IRANSans.ttf) format("truetype"), url(../fonts/irsans/IRANSans.eot) format("eot");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: irsans;
+    src: url(../fonts/irsans/IRANSans-Medium.woff) format("woff"),
+        url(../fonts/irsans/IRANSans-Medium.woff2) format("woff2"),
+        url(../fonts/irsans/IRANSans-Medium.ttf) format("truetype"),
+        url(../fonts/irsans/IRANSans-Medium.eot) format("eot");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: irsans;
+    src: url(../fonts/irsans/IRANSans-Bold.woff) format("woff"),
+        url(../fonts/irsans/IRANSans-Bold.woff2) format("woff2"),
+        url(../fonts/irsans/IRANSans-Bold.ttf) format("truetype"), url(../fonts/irsans/IRANSans-Bold.eot) format("eot");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: irsansdn;
+    src: url(../fonts/irsans/IRANSansDN/iransansdnlight.woff) format("woff"),
+        url(../fonts/irsans/IRANSansDN/iransansdnlight.woff2) format("woff2"),
+        url(../fonts/irsans/IRANSansDN/iransansdnlight.ttf) format("truetype"),
+        url(../fonts/irsans/IRANSansDN/iransansdnlight.eot) format("eot");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: irsansdn;
+    src: url(../fonts/irsans/IRANSansDN/iransansdn.woff) format("woff"),
+        url(../fonts/irsans/IRANSansDN/iransansdn.woff2) format("woff2"),
+        url(../fonts/irsans/IRANSansDN/iransansdn.ttf) format("truetype"),
+        url(../fonts/irsans/IRANSansDN/iransansdn.eot) format("eot");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: irsansdn;
+    src: url(../fonts/irsans/IRANSansDN/iransansdnbold.eot) format("woff"),
+        url(../fonts/irsans/IRANSansDN/iransansdnbold.woff2) format("woff2"),
+        url(../fonts/irsans/IRANSansDN/iransansdnbold.ttf) format("truetype"),
+        url(../fonts/irsans/IRANSansDN/iransansdnbold.eot) format("eot");
+    font-weight: 600;
+    font-style: normal;
+}
+
+$Body_Font: irsans;
+$FontDastNevis: irsansdn;
+$MainColor: #b9477e;
+$DisableColor: #e7e5fc;
+$FontColor: black;
+$MainColorLightPlusPlus: #f7ebf1;
+$MainColorLight: #b9477e;
+$MainColor: #861052;
+$DarkBrand: #54002a;
+$BGPattern: #e7e5fc;
+$FilledBorderLight: #a59ead;
+$Iconsfont: #200e32;
+$Blue: #00bfff;
+$Background: #f9f9f9;
+$PrimaryFontColor: #200e32;
+$MidFontColor: #707070;
+$DeactiveFontcolor: #a59ead;
+$MainColorCTA: #861052;
+$ErrorColor: #c21111;
+$SuccessColor: #039c03;
+$Ratecolor: #ffd600;
+.home-carts .single-cart {
+    min-height: 510px !important;
+    padding-top: 5px;
+}
+
+.home-carts .single-cart img {
+    max-height: 400px !important;
+}
+
+.button-cat-appliance {
+    position: absolute;
+    bottom: 10%;
+    right: 22%;
+    width: 266px;
+    height: 52px;
+    background-color: #f13333;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.33;
+    letter-spacing: normal;
+    text-align: right;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.mt-singlecart-100 {
+    margin-top: 100px;
+}
+
+.logoBlandy {
+    width: 292px;
+    height: 76px;
+    background-image: url("../../img/blandy-logo.png");
+    background-size: 292px 76px;
+    text-align: center;
+}
+
+@mixin b-title {
+    height: 38px;
+    font-family: $Body_Font;
+    font-size: 24px;
+    color: $FontColor;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+@mixin b-button {
+    width: 292px;
+    height: 48px;
+    border-radius: 5px;
+    font-family: $Body_Font;
+    font-size: 24px;
+}
+
+.register-title {
+    @include b-title;
+}
+
+.login-container {
+    .pl-input {
+        padding-left: 50px !important;
+        padding-right: 20px !important;
+        width: 292px !important;
+        word-spacing: 5px !important;
+        margin-right: 5px !important;
+    }
+    .plfield span {
+        right: 35px !important;
+        top: 14px !important;
+    }
+    .pl-input:hover {
+        border: solid 2px $MainColor !important;
+    }
+    .plfield:hover .icon-cellphone {
+        color: $MainColor !important;
+    }
+    .plfielderror .pl-input {
+        color: red !important;
+        border-color: red !important;
+    }
+    .plfielderror i {
+        color: red !important;
+    }
+    .icon-cellphone,
+    .icon-lock,
+    .icon-challenge,
+    .icon-tachometer,
+    .icon-calendar {
+        left: 40px !important;
+    }
+    .checkboxes {
+        margin-top: 10px !important;
+    }
+    .checkboxes input[type="checkbox"] {
+        border-color: $FontColor !important;
+    }
+    .checkboxes input[type="checkbox"]:checked {
+        border-color: $MainColor !important;
+    }
+    .pl-input:valid + .grow {
+        color: rgb(179, 177, 177);
+        transform: scale(0.8);
+        right: 6px;
+        top: -15px !important;
+    }
+    .pl-input:not(:placeholder-shown) + .grow {
+        color: rgb(179, 177, 177);
+        transform: scale(0.9);
+        right: 8px !important;
+        top: -15px !important;
+        z-index: 100;
+        background-color: #fff;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.blandy-button-medium-active {
+    @include b-button;
+    background-color: $MainColor;
+    color: white;
+    width: 120px !important;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.blandy-button-medium-disable {
+    @include b-button;
+    background-color: $DisableColor;
+    color: $FontColor;
+    cursor: not-allowed !important;
+    width: 120px !important;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.blandy-button-active {
+    @include b-button;
+    background-color: $MainColor;
+    color: white;
+}
+
+.blandy-button-disable {
+    @include b-button;
+    background-color: $DisableColor;
+    color: $FontColor;
+    cursor: not-allowed !important;
+}
+
+.login-to-account {
+    padding: 9px 14px 8px;
+    border-radius: 5px;
+    border: solid 2px #861052;
+    background-color: #ffffff;
+    color: #861052;
+}
+
+.login-to-account div {
+    display: inline-block;
+}
+
+.login-to-account li {
+    font-size: 18px;
+    margin-right: 5px;
+    color: #000;
+}
+
+.home-carts {
+    background-color: #e7e5fc;
+}
+
+.list-header {
+    font-family: $FontDastNevis;
+    font-size: 30px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.list-bg {
+    background-color: $BGPattern;
+}
+
+// .Product_Card_LIst {
+//     background-color: $BGPattern;
+// }
+.featured-cat-icon {
+    border: solid 3px #861052;
+    border-radius: 50%;
+    height: 122px;
+    max-width: 122px;
+    padding-top: 20px;
+    margin-bottom: 4px;
+}
+
+.second-features .featured-cat-icon {
+    border-width: 0px;
+    height: 85px;
+}
+
+.second-features .featured-cat div {
+    color: #fff !important;
+}
+
+.featured-cat {
+    width: 122px;
+    text-align: center;
+    color: #861052;
+    margin-bottom: 12px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 50px !important;
+    margin-left: 50px !important;
+}
+
+.featured-cat-zemanat {
+    margin-right: 30px !important;
+    margin-left: 30px !important;
+}
+
+.second-features .featured-cat {
+    padding-top: 4px !important;
+}
+
+.second-features-container {
+    background-image: url("../../img/bg-second-features.png");
+    height: 543;
+    // padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.second-features-container h2 {
+    color: #e7e5fc;
+    font-size: 30px !important;
+}
+
+.bg-pattern2 {
+    background-image: url("../../img/bg-pattern1.png");
+    height: 61px;
+    // margin-top: 19px;
+}
+
+.bg-pattern1 {
+    background-image: url("../../img/Rectangle 1489.png");
+    height: 61px;
+    margin-top: 19px;
+}
+
+.empty-basket-container {
+    border-radius: 5px;
+    border: solid 1px #a59ead;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 50px;
+    min-height: 463px;
+}
+
+.badge {
+    font-size: 14px;
+}
+
+.tbl-basket-summary tr:last-child td {
+    border-top: solid 1px #707070;
+}
+
+.shopping {
+    background-image: url("../../img//bg-shopping.png");
+    background-color: #fff;
+}
+
+.menu-hierarchy {
+    margin: 10px;
+    font-size: 14px;
+}
+
+.basket-items-and-sum {
+    width: 926px;
+}
+
+.search-assets {
+    background-color: #e7e5fc;
+}
+
+.asset-detail-feature-icon img {
+    width: 40px;
+}
+
+.asset-detail-feature-icon {
+    height: 50px;
+}
+
+.lbl-feature {
+    font-size: 8px;
+    color: $MidFontColor;
+}
+
+.assetdetail-features .col {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.top-UserHeader .fa-sign-out {
+    color: $MidFontColor;
+    font-size: 30px;
+}
+
+.badge-warning {
+    background-color: $DarkBrand;
+    color: #fff;
+}
+
+.addtocompare {
+    background-color: #fff;
+}
+
+.comparer {
+    display: inline-block;
+}
+
+.btn-addtocompare {
+    background-color: #f7ebf1;
+    color: #850f52;
+    background-image: url("../../img/compare.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    border-width: 0px;
+    margin-top: 110px !important;
+}
+
+.compare-vali-list ul li div {
+    display: inline-block;
+    padding: 5px;
+}
+
+.footer .row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.order-status-selector {
+    padding: 9px 10px;
+    object-fit: contain;
+    border-radius: 6px;
+    border: solid 1px #a59ead;
+    text-align: center;
+    cursor: pointer;
+    width: 165px;
+}
+
+.order-status-unselected {
+    padding: 9px 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 165px;
+}
+
+.tblorders-type tr td,
+.tblorders-type tr th {
+    padding: 8px;
+    text-align: center;
+}
+.tblorders-type tr th {
+    min-width: 130px;
+}
+
+.order-type-container {
+    border: solid 1px #a59ead;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 45px;
+    border-radius: 5px;
+    max-width: 608px;
+}
+
+.msg-noitem {
+    font-size: 28px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: #aaa4a4;
+    margin-top: 44px;
+    text-align: center;
+
+}
+.pointer{
+    cursor: pointer;
+}
+.view-order-container{
+    direction: rtl;
+    text-align: right;
+    margin-top: 45px;
+}
+
+.view-order-container .row{
+    width: 400px;
+}
+.view-order-container .row .col{
+    white-space: nowrap;
+    min-height: 25px;
+    margin-bottom: 8px;
+}
+.lbl-order-status{
+    font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  text-align: left;
+  color: #039c03;
+  display: contents;
+  padding: 5px;
+}
+
+.tbl-order-info tr td{
+    border: solid 0.5px #a59ead;
+    padding-right: 5px;
+    padding: 15px;
+}
+.tbl-order-info tr:first-child td{
+    border-left-style: none;
+    border-right-style: none;
+}
+
+.tbl-order-info tr:nth-child(2) td:nth-child(2){
+    border-left-style: none;
+}
+.tbl-order-info >tr:nth-child(2) >td:first-child{
+    border-right-style: none;
+}
+
+.tbl-order-info tr:nth-child(3) td:nth-child(2){
+    border-left-style: none;
+}
+.tbl-order-info tr:nth-child(3) td:first-child{
+    border-right-style: none;
+}
+.tbl-order-info .row .col{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.tblBookingAsset tr th {
+    border-top-style: none;
+    color: #200e32;
+    text-align: center;
+}
+.tblBookingAsset tr th:nth-child(2) {
+    text-align: right;
+}
+
+.tblBookingAsset tr td {
+    border:solid 1px #a59ead;
+    text-align: center;
+}
+.tblBookingAsset tr th, .tblBookingAsset tr td {
+    border-left:solid 1px #a59ead;
+}
+.tblBookingAsset tr th:first-child {
+    border-right-style:none;
+}
+
+.tblBookingAsset tr th:last-child {
+    border-left-style: none;
+}
+
+.tblBookingAsset tr:nth-child(3) td, .tblBookingAsset tr:nth-child(4) td {
+    border-style: none;
+}
+.tbl-order-info tr:nth-child(4) td:last-child{
+    border-left-style: none;
+}
+.tbl-order-info tr:nth-child(4) td:first-child{
+    border-right-style: none;
+}
+
+.view-order-container .val{
+    font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  color: #200e32;
+}
+
+.img-product-order{
+    width: 80px;
+}
+.modal-rebuy{
+    border-radius: 5px;
+  background-color: #f7ebf1;
+}
+.modal-rebuy-container .modal-header{
+    background-color: #f7ebf1;
+
+}
+
+.rebuy-item{
+    margin: 32px;
+    background-color: #fff;
+    padding: 17px;
+}
+.modal-rebuy-container{
+    direction: rtl;
+}
+.modal-rebuy-container .modal-content{
+    
+    background-color: #fff !important;
+    border-style: none;;
+    max-width: 672px;
+}
+.btn-rebuy{
+    width: 132px;
+  height: 52px;
+  margin: 17.5px 42px 0 0;
+  padding: 7px 41px 7px 42px;
+  object-fit: contain;
+  border-radius: 5px;
+  border: solid 2px #b9477e;
+  white-space: nowrap;
+}
+.modal-ordercomment-container{
+ text-align: right;
+}
+
+.modal-ordercomment-container .modal-ordercomment{
+    padding: 16px;
+    direction: rtl;
+}
+.order-survey-params .row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.order-survey-params .AutoChar_Modal_Content_Button {
+    text-align: center;
+    border-style: none;
+    border-top: solid 1px #C2C2C2;
+    border-radius: 0px;
+    height: 9px;
+    line-height: 2;
+    border-left: solid 1px #C2C2C2;
+    cursor: pointer;
+}
+.order-survey-params .selected-score{
+    background-color: unset;
+    color: unset !important;
+}
+
+.order-survey-params .selected-score:after {
+    content: "";
+    height: 24px;
+    vertical-align: bottom;
+    width: 100%;
+    border-left: 3px solid #861052;
+    text-align: left;
+    float: left;
+    left:-3px;
+    z-index: -1;
+    margin-left: -3px;
+    margin-top: -35px;
+}
+
+.survey-pro-title{
+    font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.55;
+  letter-spacing: normal;
+  text-align: right;
+  color: #200e32;
+}

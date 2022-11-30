@@ -1,0 +1,206 @@
+@keyframes fadein {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes transin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.tView {
+    animation: fadein 3s;
+    border: 2px solid #248185;
+}
+
+.treeRtl {
+    text-align: right;
+    float: right;
+}
+
+.treeRtl b {
+    float: right;
+    padding-right: 3px;
+    padding-left: 3px;
+    color: black;
+    font-size: medium;
+    overflow: hidden;
+}
+
+.treeLtr {
+    text-align: left;
+    float: left;
+}
+
+.treeLtr b {
+    float: left;
+    padding-right: 3px;
+    padding-left: 3px;
+    color: black;
+    font-size: medium;
+    overflow: hidden;
+}
+
+.tViewHeader {
+    border: 2px solid #248185;
+    padding: 1%;
+}
+
+.tViewHeader b {
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.tViewHeader li {
+    width: 100%;
+}
+
+.tView ul {
+    min-height: 600px;
+    list-style: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.treeRtl ul li {
+    border-right: 1px solid royalblue;
+}
+
+.treeLtr ul li {
+    border-left: 1px solid royalblue;
+}
+
+
+/* .tView ul li span
+{
+  border-bottom: 1px solid gray;
+} */
+
+.tView ul li li {
+    display: block;
+}
+
+.tViewHeader ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+.tViewHeader ul li span {
+    color: black;
+    padding-right: 4px;
+    padding-left: 4px;
+    font-weight: bolder;
+    font-size: large;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 2px;
+    padding-left: 40px;
+    padding-top: 7px;
+}
+
+.tView ul li a {
+    color: black;
+    padding-right: 2px;
+    padding-left: 2px;
+    clear: both;
+    width: 200px;
+    text-overflow: ellipsis;
+}
+
+.tView ul li span {
+    color: black;
+    padding-right: 2px;
+    padding-left: 40px;
+    padding-top: 7px;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tView ul li button {
+    display: inline;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin: 1px;
+}
+
+.tView ul li a::before {
+    font-family: "FontAwesome";
+    content: "\f055";
+    padding-right: 3px;
+    padding-left: 3px;
+    color: black;
+    display: inline-block;
+    font-size: medium;
+}
+
+li b:hover {
+    cursor: copy;
+}
+
+.texpand::before {
+    font-family: "FontAwesome";
+    content: "\f055";
+}
+
+.tcollapse::before {
+    font-family: "FontAwesome";
+    content: "\f056";
+}
+
+.tView ul li li {
+    margin-right: 50px;
+    margin-left: 50px;
+    font-size: small;
+    background-color: transparent;
+}
+
+.tView ul li li a {
+    color: black;
+    margin: 1px;
+}
+
+.tView ul li li a::before {
+    font-family: "FontAwesome";
+    content: "\f107";
+    padding-right: 3px;
+    color: black;
+    padding-right: 2px;
+}
+
+
+/* .tView ul li a::after
+{
+font-family: "FontAwesome";
+        content: "\f107";
+  padding-right: 3px;
+  color: white;
+  font-weight: bolder;
+float: right;
+} */
+
+
+/* .tView ul li a:focus::after
+{
+  animation: transin 1s;
+ animation-direction: 1;
+ transform:rotate(180deg);
+ color:white;
+ font-weight: bold;
+} */

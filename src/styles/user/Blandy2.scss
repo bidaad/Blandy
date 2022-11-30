@@ -1,0 +1,1217 @@
+@font-face {
+    font-family: irsans;
+    src: url(../fonts/irsans/IRANSans-Light.woff) format("woff"), url(../fonts/irsans/IRANSans-Light.woff2) format("woff2"), url(../fonts/irsans/IRANSans-Light.ttf) format("truetype"), url(../fonts/irsans/IRANSans-Light.eot) format("eot");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: irsans;
+    src: url(../fonts/irsans/IRANSans.woff) format("woff"), url(../fonts/irsans/IRANSans.woff2) format("woff2"), url(../fonts/irsans/IRANSans.ttf) format("truetype"), url(../fonts/irsans/IRANSans.eot) format("eot");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: irsans;
+    src: url(../fonts/irsans/IRANSans-Medium.woff) format("woff"), url(../fonts/irsans/IRANSans-Medium.woff2) format("woff2"), url(../fonts/irsans/IRANSans-Medium.ttf) format("truetype"), url(../fonts/irsans/IRANSans-Medium.eot) format("eot");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: irsans;
+    src: url(../fonts/irsans/IRANSans-Bold.woff) format("woff"), url(../fonts/irsans/IRANSans-Bold.woff2) format("woff2"), url(../fonts/irsans/IRANSans-Bold.ttf) format("truetype"), url(../fonts/irsans/IRANSans-Bold.eot) format("eot");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: irsansdn;
+    src: url(../fonts/irsans/IRANSansDN/iransansdnlight.woff) format("woff"), url(../fonts/irsans/IRANSansDN/iransansdnlight.woff2) format("woff2"), url(../fonts/irsans/IRANSansDN/iransansdnlight.ttf) format("truetype"), url(../fonts/irsans/IRANSansDN/iransansdnlight.eot) format("eot");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: irsansdn;
+    src: url(../fonts/irsans/IRANSansDN/iransansdn.woff) format("woff"), url(../fonts/irsans/IRANSansDN/iransansdn.woff2) format("woff2"), url(../fonts/irsans/IRANSansDN/iransansdn.ttf) format("truetype"), url(../fonts/irsans/IRANSansDN/iransansdn.eot) format("eot");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: irsansdn;
+    src: url(../fonts/irsans/IRANSansDN/iransansdnbold.eot) format("woff"), url(../fonts/irsans/IRANSansDN/iransansdnbold.woff2) format("woff2"), url(../fonts/irsans/IRANSansDN/iransansdnbold.ttf) format("truetype"), url(../fonts/irsans/IRANSansDN/iransansdnbold.eot) format("eot");
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+$Body_Font: irsans;
+$FontDastNevis: irsansdn;
+$MainColor:#b9477e;
+$DisableColor:#e7e5fc;
+$FontColor:black;
+.home-carts .single-cart {
+    min-height: 510px !important;
+    padding-top: 5px;
+}
+
+.home-carts .single-cart img {
+    max-height: 400px !important;
+}
+
+.button-cat-appliance {
+    position: absolute;
+    bottom: 10%;
+    right: 22%;
+    width: 266px;
+    height: 52px;
+    background-color: #f13333;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.33;
+    letter-spacing: normal;
+    text-align: right;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.hot-container {
+    margin-right: 100px;
+}
+
+.mt-singlecart-100 {
+    margin-top: 100px;
+}
+
+.logoBlandy {
+    width: 292px;
+    height: 76px;
+    background-image: url('../../img/blandy-logo.png');
+    background-size: 292px 76px;
+    text-align: center;
+}
+
+@mixin b-title {
+    height: 38px;
+    font-family: $Body_Font;
+    font-size: 24px;
+    color: $FontColor;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+@mixin b-button {
+    width: 292px;
+    height: 48px;
+    border-radius: 5px;
+    font-family: $Body_Font;
+    font-size: 24px;
+}
+
+.register-title {
+    @include b-title;
+}
+
+.login-container {
+    .pl-input {
+        padding-left: 50px !important;
+        padding-right: 20px !important;
+        width: 292px !important;
+        word-spacing: 5px !important;
+        margin-right: 5px !important;
+    }
+    .plfield span {
+        right: 45px !important;
+        top: 14px !important;
+    }
+    .pl-input:hover {
+        border: solid 2px $MainColor !important;
+    }
+    .plfield:hover .icon-cellphone {
+        color: $MainColor !important;
+    }
+    .plfield:hover .icon-lock {
+        color: $MainColor !important;
+    }
+    .plfielderror .pl-input {
+        color: red !important;
+        border-color: red !important;
+    }
+    .plfielderror i {
+        color: red !important;
+    }
+    .icon-cellphone,
+    .icon-lock,
+    .icon-challenge,
+    .icon-tachometer,
+    .icon-calendar {
+        left: 20px !important;
+    }
+    .checkboxes {
+        margin-top: 10px !important;
+    }
+    .checkboxes input[type="checkbox"] {
+        border-color: $FontColor !important;
+    }
+    .checkboxes input[type="checkbox"]:checked {
+        border-color: $MainColor !important;
+    }
+    .pl-input:valid+.grow {
+        color: rgb(179, 177, 177);
+        transform: scale(0.8);
+        right: 6px;
+        top: -15px !important;
+    }
+    .pl-input:not(:placeholder-shown)+.grow {
+        color: rgb(179, 177, 177);
+        transform: scale(0.9);
+        right: 8px !important;
+        top: -15px !important;
+        z-index: 100;
+        background-color: #fff;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .icon-challenge {
+        color: $MainColor;
+    }
+    .RememberMe {
+        text-align: right;
+    }
+    .RememberMeSpan {
+        margin-top: -9px;
+        margin-right: -20px;
+        width: 200px;
+    }
+    .pl-input:hover,
+    .pl-input:focus,
+    .ddDays:focus+div {
+        border: solid 2px $MainColor !important;
+    }
+}
+
+.blandy-button-medium-active {
+    @include b-button;
+    background-color: $MainColor;
+    color: white;
+    width: 120px !important;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.blandy-button-medium-disable {
+    @include b-button;
+    background-color: $DisableColor;
+    color: $FontColor;
+    cursor: not-allowed !important;
+    width: 120px !important;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.blandy-button-active {
+    @include b-button;
+    background-color: $MainColor;
+    color: white;
+}
+
+.blandy-button-disable {
+    @include b-button;
+    background-color: $DisableColor;
+    color: $FontColor;
+    cursor: not-allowed !important;
+}
+
+.userloaderBlandy {
+    border: 14px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 14px solid $MainColor;
+    border-right: 14px solid black;
+    border-bottom: 14px solid $MainColor;
+    border-left: 14px solid black;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    display: inline-block;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.register-code {
+    @include b-title;
+    font-size: 14px;
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+}
+
+@mixin b-link {
+    height: 22px;
+    font-family: $Body_Font;
+    font-size: 14px;
+    color: #00bfff;
+    display: inline-block;
+    border: none;
+    margin-top: 3px !important;
+    margin-bottom: 15px !important;
+}
+
+.registerlink {
+    @include b-link;
+}
+
+.registertext {
+    @include b-link;
+    color: $FontColor;
+}
+
+.registertextregister {
+    @include b-link;
+    color: $MainColor;
+    margin-bottom: 4px;
+}
+
+.registertextregister p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.img-register-sucess {
+    width: 80px;
+    height: 80px;
+    margin-left: 5%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.fa-account {
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.searchboxLogin {
+    width: 400px;
+}
+
+.fa-search-box {
+    position: absolute;
+    right: 5px;
+    top: 7px;
+}
+
+.div-search-box {
+    position: relative;
+}
+
+.suggestionsBlandy {
+    width: 398px;
+}
+
+.suggestionsBlandy div {
+    width: 398px !important;
+}
+
+.searchbox:focus {
+    background-color: white;
+    caret-color: $MainColor;
+}
+
+.BasketBlandy {
+    position: relative;
+    margin-right: -22px;
+}
+
+.AddBasketBlandy {
+    width: 24px !important;
+    height: 24px !important;
+    position: absolute;
+    right: 10px;
+}
+
+.unavailable {
+    width: 101px;
+    height: 28px;
+    font-family: $Body_Font;
+    font-size: 18px;
+    text-align: center;
+    color: #707070;
+}
+
+.logo-samandehi-span1 {
+    margin-right: 135px;
+    margin-left: 5px;
+}
+
+.logo-samandehi-span1 img {
+    width: 64px;
+    height: 64px;
+    background-color: white;
+}
+
+.logo-samandehi-span2 {
+    margin-right: 9px;
+    margin-left: 5px;
+}
+
+.logo-samandehi-span2 img {
+    width: 64px;
+    height: 64px;
+    background-color: white;
+}
+
+.mail-blandy {
+    position: absolute;
+    width: 21px;
+    height: 17px;
+    top: 8px;
+    right: 15px;
+}
+
+.arrow-cat {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.AdSearch_Box {
+    background-color: white;
+    margin-top: 20px;
+    margin-right: 5px;
+    padding-left: 0px;
+}
+
+.del-icon {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.input-text-price {
+    width: 55px;
+    height: 35px;
+    border-radius: 4px;
+    border: solid 1px #a59ead;
+    background-color: #fafafa;
+}
+
+.Text-AdSearch {
+    width: 15px;
+    height: 15px;
+    top: 14px;
+    right: 4px;
+    position: absolute;
+}
+
+.input-Text-AdSearch {
+    position: relative;
+}
+
+.close {
+    opacity: 0.7 !important;
+}
+
+.close:hover {
+    opacity: 1 !important;
+}
+
+.blandy-button-basket {
+    background-color: white !important;
+    color: $FontColor;
+    width: 185px !important;
+    text-align: right !important;
+    padding-right: 10px !important;
+    border-radius: 5px;
+    border: 2px solid $MainColor !important;
+    padding-right: 1px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.blandy-title-card {
+    font-family: $Body_Font;
+    font-size: 12px;
+    color: #200e32;
+}
+
+.blandy-title-card:hover {
+    color: $MainColor;
+}
+
+.AddBasketBlandyMini {
+    width: 20px !important;
+    height: 20px !important;
+    position: absolute;
+    left: 9px;
+}
+
+.page-contect {
+    background-color: white;
+}
+
+.Product_Search_PageNumber {
+    text-align: center !important;
+    margin-right: 34% !important;
+    width: auto !important;
+}
+
+.fa-search-box-close {
+    color: black;
+    position: absolute;
+    left: 10px;
+    bottom: -1px;
+    font-size: 25px;
+}
+
+.fa-search-box-close:hover {
+    cursor: pointer;
+    color: $MainColor;
+}
+
+.card-custom {
+    min-width: 200px !important;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.card .card-img-top {
+    height: 140px !important;
+}
+
+.card-body .nav-link {
+    padding: 0px;
+    min-height: 50px !important;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+
+.backToUpdiv {
+    text-align: center;
+    background-color: white;
+    height: 60px;
+}
+
+.backToUp {
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    margin: 2px 0px 25px 0px;
+}
+
+.backToUp:hover {
+    border: 1px solid #707070b2;
+}
+
+.BlandyCompareButtonsBox {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.BlandyCompareButtons {
+    padding: 3px;
+}
+
+.featured-cat-product {
+    width: 122px;
+    text-align: center;
+    color: #861052;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.attribute-Title-Asset-Blandy {
+    font-family: $Body_Font;
+    font-size: 15px;
+    letter-spacing: normal;
+    text-align: right;
+    color: #424242;
+    font-weight: bold;
+}
+
+.attribute-Asset-Blandy {
+    font-family: $Body_Font;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: right;
+    color: #424242;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.Product_Detail_Price_Text_Blandy {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.58;
+    letter-spacing: normal;
+    color: black;
+    bottom: 5px;
+}
+
+.btn-add-blandy {
+    position: absolute;
+    align-items: flex-end;
+    left: 2px;
+    top: 50px;
+}
+
+.flex-container-Blany {
+    margin-top: 0;
+    height: 50px !important;
+    display: flex;
+    position: absolute;
+    left: 0px;
+    top: -26px;
+}
+
+.blandy-opnion-span {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 2px;
+    padding-left: 2px;
+    font-family: $Body_Font;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    text-align: right;
+    color: #200e32;
+    direction: ltr;
+}
+
+.line-openion-Blandy {
+    height: 4px;
+    border-radius: 3px;
+    background-color: #a59ead;
+    position: relative;
+}
+
+.line-openion-part-Blandy {
+    margin-top: 14px;
+    margin-bottom: 17px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: $MainColor;
+}
+
+.line-openion-part-Blandy-Gray {
+    margin-top: 14px;
+    margin-bottom: 4px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #a59ead;
+}
+
+.line-openion-part-Blandy-Gray .line-openion-circle-Blandy,
+.line-openion-part-Blandy-Gray .line-openion-circle-left-Blandy {
+    background-color: #a59ead !important;
+}
+
+.line-openion-circle-Blandy {
+    width: 11px;
+    height: 11px;
+    background-color: $MainColor;
+    border-radius: 11px;
+    position: absolute;
+    top: -3px;
+    right: 0px;
+}
+
+.line-openion-circle-left-Blandy {
+    width: 11px;
+    height: 11px;
+    background-color: $MainColor;
+    border-radius: 11px;
+    position: absolute;
+    top: -3px;
+    left: 0px;
+}
+
+.img-openion-modal {
+    width: 400px;
+}
+
+.gur-span {
+    font-family: $Body_Font;
+    font-size: 16px;
+    text-align: right;
+    color: #707070;
+}
+
+.blandy-star {
+    width: 25px;
+    height: 25px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.SimilarAssetTitle {
+    height: 71px;
+    margin: 24.3px 0.5px 29px;
+    padding: 16px 38px 17px 1px;
+    object-fit: contain;
+    background-color: #861052;
+    font-family: $FontDastNevis;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #ffffff;
+}
+
+.survey-list {
+    margin: 9px 0 9px 6px;
+}
+
+.survey-add {
+    margin: 2px;
+}
+
+.blandy-icon-profile {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.sp-profile {
+    font-family: $FontDastNevis;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.profile-info {
+    width: 200px;
+    height: 200px;
+    border-radius: 146px;
+    background-color: #F7EBF1;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    background-image: linear-gradient(to bottom, rgba(84, 0, 42, 0) 65%, rgba(51, 0, 25, 0.26) 82%, #110008);
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+}
+
+.profile-info img {
+    width: 200px;
+    height: 200px;
+    border-radius: 146px;
+}
+
+.profile-info-sp {
+    font-family: $FontDastNevis;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    bottom: 14px;
+    left: 30%;
+    position: absolute;
+}
+
+.blandy-profile-title {
+    object-fit: contain;
+    font-family: $FontDastNevis;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+    color: #200e32;
+}
+
+.blandy-profile-up {
+    max-width: 116px;
+    min-height: 116px;
+    object-fit: contain;
+    border-radius: 5px;
+    border: solid 1px #b5b3c9;
+    background-color: #ffffff;
+    margin: 5px;
+    position: relative;
+}
+
+.profile-add-adress-profile {
+    max-width: 116px;
+    min-height: 116px;
+    background-color: #ffffff;
+    position: relative;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+.profile-add-adress-profile img {
+    width: 116px;
+    height: 116px;
+    border: 1px solid black;
+}
+
+.blandy-profile-up:hover {
+    color: $MainColor;
+    border: solid 1px $MainColor;
+}
+
+.blandy-profile-download {
+    width: 34px;
+    height: 32px;
+    margin-top: 70px;
+}
+
+.blandy-profile-up-error {
+    font-family: $FontDastNevis;
+    font-size: 10px;
+    color: #c21111;
+    margin: 5px;
+    position: absolute;
+    bottom: 2px;
+}
+
+.blandy-profile-up-msg-update {
+    font-family: $FontDastNevis;
+    font-size: 10px;
+    color: #200e32;
+    margin: 5px;
+    position: absolute;
+    bottom: 2px;
+}
+
+.lbl-profile {
+    font-family: $FontDastNevis;
+    font-size: 16px;
+    text-align: right;
+    color: #200e32;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.input-profile {
+    font-family: $FontDastNevis;
+    border-radius: 5px;
+    border: solid 1px #b5b3c9;
+    background-color: #ffffff;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.error-profile {
+    font-family: $FontDastNevis;
+    font-size: 12px;
+    text-align: right;
+    color: red !important;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.input-profile-mobile {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 25px;
+    top: 40px;
+}
+
+.input-profile-show {
+    width: 24px;
+    position: absolute;
+    left: 25px;
+    top: 45px;
+}
+
+.input-profile-male {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 25px;
+    top: 40px;
+}
+
+.input-profile-textarea {
+    min-height: 180px;
+    font-family: $FontDastNevis;
+    font-size: 16px;
+    text-align: right;
+    color: #a59ead;
+}
+
+.calender-profile .datepicker-input {
+    font-size: 16px !important;
+    font-family: $FontDastNevis;
+}
+
+select.input-profile {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("../../img/Arrow-Down Circle.svg");
+    background-repeat: no-repeat;
+    background-position-x: 1%;
+    background-position-y: 2px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    // padding: 1rem;
+    padding-right: 40px;
+    padding-left: 2rem;
+}
+
+.input-profile option {
+    width: 33px;
+    height: 28px;
+    margin: 0 18px 0 0;
+    font-family: $FontDastNevis;
+    font-size: 18px;
+    text-align: right;
+    color: #200e32;
+}
+
+.img-edit-profile {
+    width: 32px;
+    height: 32px;
+    margin: 32px 2px 90px 2px;
+}
+
+.btn-submit-profile {
+    min-width: 90px;
+    min-height: 52px;
+    margin: 32px 4px 90px 0px;
+    border-radius: 5px;
+    border: solid 2px #b9477e;
+    font-family: $FontDastNevis;
+    font-size: 24px;
+    text-align: center;
+    color: #861052;
+}
+
+.btn-submit-profile:disabled {
+    cursor: not-allowed;
+}
+
+.input-profile-pass {
+    font-family: $FontDastNevis;
+    border-radius: 5px;
+    border: solid 1px #b5b3c9;
+    background-color: #ffffff;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    -webkit-text-security: disc;
+    letter-spacing: 4px;
+}
+
+.input-profile-radio {
+    margin-right: -15px !important;
+    margin-left: 5px;
+    font-size: 18pt;
+    width: 50px;
+    height: 1em;
+}
+
+.lbl-profile-radio {
+    font-family: $FontDastNevis;
+    font-size: 16px;
+    text-align: right;
+    color: #200e32;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 25px !important;
+}
+
+.profile-add-adress {
+    margin-right: 10px;
+    font-family: $FontDastNevis;
+    font-size: 24px;
+    text-align: right;
+    color: #861052;
+}
+
+.profile-add-adress-icon {
+    margin-top: 25px;
+    margin-right: 40px;
+}
+
+.profile-add-adress-sp {
+    margin: 7.8px 0 0;
+    font-family: $FontDastNevis;
+    font-size: 16px;
+    text-align: center;
+    color: #200e32;
+}
+
+.ModalDeleteIcon {
+    width: 70px;
+    height: 80px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.ModalDeleteSpan {
+    height: 25px;
+    font-family: $FontDastNevis;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+}
+
+.ModalDeleteButton {
+    min-width: 208px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 56px;
+    border-radius: 5px;
+    border: solid 1px #200e32;
+    font-family: $FontDastNevis;
+    font-size: 24px;
+    text-align: center;
+    color: #200e32;
+}
+
+.ModalDeleteButton:hover {
+    border: solid 1px $MainColor;
+}
+
+.blandy-dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 11 !important;
+}
+
+.blandy-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    min-width: 200px;
+    min-height: 188px;
+    z-index: 1;
+    padding: 11px 21px 25px 22px;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+}
+
+.sp-userinfo {
+    font-family: $Body_Font;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    text-align: center;
+    color: #707070;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: solid 2px #707070;
+}
+
+.blandy-dropdown-content .link-userinfo {
+    text-decoration: none;
+    color: black !important;
+    display: inline-block;
+    font-family: $Body_Font;
+    font-size: 12px;
+    text-align: right;
+    height: 24px;
+    position: relative;
+    min-width: 120px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.blandy-dropdown-content a.nav-link {
+    color: black !important;
+}
+
+.link-userinfo span {
+    margin-right: 5px;
+    text-align: right;
+}
+
+.blandy-dropdown-content .link-userinfo:hover {
+    color: $MainColor !important;
+}
+
+.blandy-dropdown:hover .blandy-dropdown-content {
+    display: block;
+}
+
+.ic-user {
+    width: 20px;
+    height: 24px;
+    background-image: url('../../img/Profile.png');
+    background-size: 20px 24px;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    top: -5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.ic-user-order {
+    width: 24px;
+    height: 20px;
+    background-image: url('../../img/Path2074.png');
+    background-size: 24px 20px;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    top: -5px;
+    margin-right: 1px;
+    margin-left: 5px;
+}
+
+.ic-user-logout {
+    width: 20px;
+    height: 20px;
+    background-image: url('../../img/Login.png');
+    background-size: 20px 20px;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    top: -5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.blandy-AboutUs-Header {
+    position: relative;
+}
+
+.blandy-AboutUs-Header h1 {
+    margin-top: 20px;
+    margin-right: 100px;
+    position: absolute;
+    font-family: $Body_Font;
+    font-size: 46px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    text-align: right;
+    color: #ffffff;
+}
+
+.blandy-AboutUs-Title {
+    object-fit: contain;
+    font-family: $FontDastNevis;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    text-align: right;
+    color: #200e32;
+}
+
+.blandy-AboutUs-Content {
+    object-fit: contain;
+    font-family: $FontDastNevis;
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.55;
+    letter-spacing: normal;
+    text-align: right;
+    color: #200e32;
+}
+
+.blandy-AboutUs-img {
+    margin-right: 20px;
+    margin-top: 60px;
+    position: relative;
+}
+
+.blandy-AboutUs-in-img {
+    width: 160px !important;
+    position: absolute;
+    margin-right: 20px;
+    margin-top: 60px;
+    top: 7%;
+    right: 27%;
+}
+
+// .ic-user:hover {
+//     background-image: url('../../img/Group 534.png');
+// }
+@media only screen and (max-width: 500px) {
+    .AddBasketBlandyMini {
+        width: 20px !important;
+        height: 20px !important;
+        position: absolute;
+        left: 9px;
+    }
+    .Product_Category_Header {
+        display: none !important;
+    }
+    .featured-cat {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .blandy-profile-download {
+        width: 34px;
+        height: 32px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .blandy-AboutUs-Header h1 {
+        margin-top: 5px;
+        margin-right: 10px;
+        position: absolute;
+        font-family: $Body_Font;
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.57;
+        letter-spacing: normal;
+        text-align: right;
+        color: #ffffff;
+    }
+    .blandy-AboutUs-in-img {
+        width: 160px !important;
+        position: absolute;
+        margin-right: 20px;
+        margin-top: 60px;
+        top: 14%;
+        right: 17%;
+    }
+}

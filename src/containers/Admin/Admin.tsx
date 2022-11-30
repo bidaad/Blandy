@@ -1,0 +1,402 @@
+import * as React from 'react';
+import { Route } from 'react-router';
+import Layout from '../../components/Layout';
+import Counter from '../../components/Counter';
+import FetchData from '../../components/FetchData';
+import '../../styles/main.css'
+
+import Product from './Asset/Product/Product';
+import ProductEdit from './Asset/Product/ProductEdit';
+import Message from './General/Message/Message';
+import Language from './General/Language/Language';
+import Brand from './General/Brand/Brand';
+import MessageEdit from './General/Message/MessageEdit';
+import SignUp from '../../containers/User/SignUp';
+import AssetEdit from './Asset/Asset/AssetEdit';
+import Department from './General/Department/Department';
+import Person from './General/Person/Person';
+import User from './Security/User/User';
+import Zone from './General/Zone/Zone';
+import UserEdit from './Security/User/UserEdit';
+import ZoneEdit from './General/Zone/ZoneEdit';
+import BrandEdit from './General/Brand/BrandEdit';
+import PersonEdit from './General/Person/PersonEdit';
+import Resource from './Security/Resource/TreeResource';
+import ResourceLang from './Security/Resource/ResourceLang';
+import ResourceLangEdit from './Security/Resource/ResourceLangEdit';
+import Category from './Asset/Category/Category';
+import CategoryEdit from './Asset/Category/CategoryEdit';
+import HCPaymentType from './HardCode/HCPaymentType';
+import HCWOStatus from './HardCode/HCWOStatus';
+import HCShipStatus from './HardCode/HCShipStatus';
+import HCMessageTypeLang from './HardCode/HCMessageTypeLang';
+import HCShipType from './HardCode/HCShipType';
+import HCAssetHealthStatus from './HardCode/HCAssetHealthStatus';
+import HCAssetQuality from './HardCode/HCAssetQuality';
+import HCUnit from './HardCode/HCUnit';
+import HCAttributeTitle from './HardCode/HCAttributeTitle';
+import HCContactType from './HardCode/HCContactType';
+import HCAssetHealthStatusLang from './HardCode/HCAssetHealthStatusLang';
+import HCAssetQualityLang from './HardCode/HCAssetQualityLang';
+import HCUnitLang from './HardCode/HCUnitLang';
+import HCColor from './HardCode/HCColor';
+import HCDepType from './HardCode/HCDepType';
+import HCAttributeTitleLang from './HardCode/HCAttributeTitleLang';
+import HCZoneType from './HardCode/HCZoneType';
+import HCContactTypeLang from './HardCode/HCContactTypeLang';
+import HCShipVelicleType from './HardCode/HCShipVelicleType';
+import HCDepTypeLang from './HardCode/HCDepTypeLang';
+import HCAccountType from './HardCode/HCAccountType';
+import HCActionType from './HardCode/HCActionType';
+import HCPolicyTitle from './HardCode/HCPolicyTitle';
+import HCGender from './HardCode/HCGender';
+import HCPriority from './HardCode/HCPriority';
+import HCActionTypeLang from './HardCode/HCActionTypeLang';
+import HCDocType from './HardCode/HCDocType';
+import HCGenderLang from './HardCode/HCGenderLang';
+import HCPolicyTitleLang from './HardCode/HCPolicyTitleLang';
+import HCWHOperationStatus from './HardCode/HCWHOperationStatus';
+import HCLanguage from './HardCode/HCLanguage';
+import HCZoneTypeLang from './HardCode/HCZoneTypeLang';
+import HCSkillTitleLang from './HardCode/HCSkillTitleLang';
+import HCWHOperationType from './HardCode/HCWHOperationType';
+import HCCurrency from './HardCode/HCCurrency';
+import HCSkillTitle from './HardCode/HCSkillTitle';
+import HCCurrencyLang from './HardCode/HCCurrencyLang';
+import HCBookingStatus from './HardCode/HCBookingStatus';
+import HCResourceTypeLang from './HardCode/HCResourceTypeLang';
+import HCPelakCharacter from './HardCode/HCPelakCharacter';
+import HCWeekDay from './HardCode/HCWeekDay';
+import HCResourceType from './HardCode/HCResourceType';
+import HCJCOperationType from './HardCode/HCJCOperationType';
+import HCMessageType from './HardCode/HCMessageType';
+import HCUserTypeLang from './HardCode/HCUserTypeLang';
+import HCJCOperationTypeLang from './HardCode/HCJCOperationTypeLang';
+import HCUserType from './HardCode/HCUserType';
+import HCJobCardType from './HardCode/HCJobCardType';
+import HCJobCardTypeLang from './HardCode/HCJobCardTypeLang';
+import HCWHOperationStatusLang from './HardCode/HCWHOperationStatusLang';
+import HCWHOperationTypeLang from './HardCode/HCWHOperationTypeLang';
+import HCPaymentStatus from './HardCode/HCPaymentStatus';
+
+import EditHCPaymentType from './HardCode/EditHCPaymentType';
+import EditHCWOStatus from './HardCode/EditHCWOStatus';
+import EditHCShipStatus from './HardCode/EditHCShipStatus';
+import EditHCMessageTypeLang from './HardCode/EditHCMessageTypeLang';
+import EditHCShipType from './HardCode/EditHCShipType';
+import EditHCAssetHealthStatus from './HardCode/EditHCAssetHealthStatus';
+import EditHCAssetQuality from './HardCode/EditHCAssetQuality';
+import EditHCUnit from './HardCode/EditHCUnit';
+import EditHCAttributeTitle from './HardCode/EditHCAttributeTitle';
+import EditHCContactType from './HardCode/EditHCContactType';
+import EditHCAssetHealthStatusLang from './HardCode/EditHCAssetHealthStatusLang';
+import EditHCAssetQualityLang from './HardCode/EditHCAssetQualityLang';
+import EditHCUnitLang from './HardCode/EditHCUnitLang';
+import EditHCColor from './HardCode/EditHCColor';
+import EditHCDepType from './HardCode/EditHCDepType';
+import EditHCAttributeTitleLang from './HardCode/EditHCAttributeTitleLang';
+import EditHCZoneType from './HardCode/EditHCZoneType';
+import EditHCContactTypeLang from './HardCode/EditHCContactTypeLang';
+import EditHCShipVelicleType from './HardCode/EditHCShipVelicleType';
+import EditHCDepTypeLang from './HardCode/EditHCDepTypeLang';
+import EditHCAccountType from './HardCode/EditHCAccountType';
+import EditHCActionType from './HardCode/EditHCActionType';
+import EditHCPolicyTitle from './HardCode/EditHCPolicyTitle';
+import EditHCGender from './HardCode/EditHCGender';
+import EditHCPriority from './HardCode/EditHCPriority';
+import EditHCActionTypeLang from './HardCode/EditHCActionTypeLang';
+import EditHCDocType from './HardCode/EditHCDocType';
+import EditHCGenderLang from './HardCode/EditHCGenderLang';
+import EditHCPolicyTitleLang from './HardCode/EditHCPolicyTitleLang';
+import EditHCWHOperationStatus from './HardCode/EditHCWHOperationStatus';
+import EditHCLanguage from './HardCode/EditHCLanguage';
+import EditHCZoneTypeLang from './HardCode/EditHCZoneTypeLang';
+import EditHCSkillTitleLang from './HardCode/EditHCSkillTitleLang';
+import EditHCWHOperationType from './HardCode/EditHCWHOperationType';
+import EditHCCurrency from './HardCode/EditHCCurrency';
+import EditHCSkillTitle from './HardCode/EditHCSkillTitle';
+import EditHCCurrencyLang from './HardCode/EditHCCurrencyLang';
+import EditHCBookingStatus from './HardCode/EditHCBookingStatus';
+import EditHCResourceTypeLang from './HardCode/EditHCResourceTypeLang';
+import EditHCPelakCharacter from './HardCode/EditHCPelakCharacter';
+import EditHCWeekDay from './HardCode/EditHCWeekDay';
+import EditHCResourceType from './HardCode/EditHCResourceType';
+import EditHCJCOperationType from './HardCode/EditHCJCOperationType';
+import EditHCMessageType from './HardCode/EditHCMessageType';
+import EditHCUserTypeLang from './HardCode/EditHCUserTypeLang';
+import EditHCJCOperationTypeLang from './HardCode/EditHCJCOperationTypeLang';
+import EditHCUserType from './HardCode/EditHCUserType';
+import EditHCJobCardType from './HardCode/EditHCJobCardType';
+import EditHCJobCardTypeLang from './HardCode/EditHCJobCardTypeLang';
+import EditHCWHOperationStatusLang from './HardCode/EditHCWHOperationStatusLang';
+import EditHCWHOperationTypeLang from './HardCode/EditHCWHOperationTypeLang';
+import EditHCPaymentStatus from './HardCode/EditHCPaymentStatus';
+import JobCard from './Maintenance/JobCard';
+import JobCardEdit from './Maintenance/JobCardEdit';
+import ShipRule from './Shipping/ShipRule';
+import ShipRuleEdit from './Shipping/ShipRuleEdit';
+import LoadDeliveryTimeTitle from './Shipping/LoadDeliveryTimeTitle';
+import LoadDeliveryTimeTitleEdit from './Shipping/LoadDeliveryTimeTitleEdit';
+import BillOfLading from './Shipping/BillOfLading';
+import BillOfLadingEdit from './Shipping/BillOfLadingEdit';
+import CurrencyExchange from './Finance/CurrencyExchange';
+import CurrencyExchangeEdit from './Finance/CurrencyExchangeEdit';
+import Assignment from './Asset/Assignment/Assignment';
+import AssignmentEdit from './Asset/Assignment/AssignmentEdit';
+import Booking from './Booking/Booking';
+import BookingEdit from './Booking/BookingEdit';
+import Stock from './Booking/Stock';
+import StockEdit from './Booking/StockEdit';
+import LoadDeliveryTTWeekDay from './Shipping/LoadDeliveryTTWeekDay';
+import LoadDeliveryTTWeekDayEdit from './Shipping/LoadDeliveryTTWeekDayEdit';
+import DepartmentEdit from './General/Department/DepartmentEdit';
+import PaymentEdit from './Finance/PaymentEdit';
+import Payment from './Finance/Payment';
+import Account from './Finance/Account';
+import AccountEdit from './Finance/AccountEdit';
+import AssetSelectionType from './Asset/Asset/AssetSelectionType';
+import AssetSelectionTypeEdit from './Asset/Asset/AssetSelectionTypeEdit';
+import FAQ from './Crm/FAQ';
+import FAQEdit from './Crm/FAQEdit';
+import Guarantee from './Guarantee/Guarantee';
+import GuaranteeEdit from './Guarantee/GuaranteeEdit';
+import ResourceEdit from './Security/Resource/ResourceEdit';
+import SurveySubject from './Crm/SurveySubject';
+import SurveySubjectEdit from './Crm/SurveySubjectEdit';
+import HCMonth from './HardCode/HCMonth';
+import HCSelectionType from './HardCode/HCSelectionType';
+import HCOperationStatus from './HardCode/HCOperationStatus';
+import HCGuaranteeType from './HardCode/HCGuaranteeType';
+import HCHardCondition from './HardCode/HCHardCondition';
+import HCPlanTitle from './HardCode/HCPlanTitle';
+import HCPlanType from './HardCode/HCPlanType';
+import HCPredecessorType from './HardCode/HCPredecessorType';
+import HCQuestionTitle from './HardCode/HCQuestionTitle';
+import HCSurveyDomain from './HardCode/HCSurveyDomain';
+import HCSurveyParameter from './HardCode/HCSurveyParameter';
+import HCOperationStatusEdit from './HardCode/HCOperationStatusEdit';
+import HCGuaranteeTypeEdit from './HardCode/HCGuaranteeTypeEdit';
+import HCHardConditionEdit from './HardCode/HCHardConditionEdit';
+import HCPlanTypeEdit from './HardCode/HCPlanTypeEdit';
+import HCPlanTitleEdit from './HardCode/HCPlanTitleEdit';
+import HCPredecessorTypeEdit from './HardCode/HCPredecessorTypeEdit';
+import HCQuestionTitleEdit from './HardCode/HCQuestionTitleEdit';
+import HCSurveyDomainEdit from './HardCode/HCSurveyDomainEdit';
+import HCSurveyParameterEdit from './HardCode/HCSurveyParameterEdit';
+import HCPlanTitleLangEdit from './HardCode/HCPlanTitleLangEdit';
+import Contact from './General/Contact/Contact';
+import ChatManager from './Crm/ChatManager';
+import NewsLetter from './Crm/NewsLetter';
+import NewsLetterEdit from './Crm/NewsLetterEdit';
+import Chat from './Crm/Chat';
+import ChatEdit from './Crm/ChatEdit';
+import MessageBox from './Crm/MessageBox';
+import TabLayout from '../../components/TabLayout';
+import Asset from './Asset/Asset/Asset';
+import CategorySelectionType from './Asset/Category/CategorySelectionType';
+
+export default () => (
+    <Layout>
+        {/* <Route path='/admin' component={TabLayout} /> */}
+        <Route path='/admin/home' component={TabLayout} />
+        <Route path='/admin/asset' component={Asset} />
+        <Route path='/admin/AssetEdit' component={AssetEdit} />
+        <Route path='/admin/message' component={Message} />
+        <Route path='/admin/product' component={Product} />
+        <Route path='/admin/language' component={Language} />
+        <Route path='/admin/brand' component={Brand} />
+        <Route path='/admin/signup' component={SignUp} />
+        <Route path='/admin/department' component={Department} />
+        <Route path='/admin/DepartmentEdit' component={DepartmentEdit} />
+        <Route path='/admin/category' component={Category} />
+        <Route path='/admin/newsletter' component={NewsLetter} />
+        <Route path='/admin/newsletteredit' component={NewsLetterEdit} />
+        <Route path='/admin/chat' component={Chat} />
+        <Route path='/admin/chatEdit' component={ChatEdit} />
+        <Route path='/admin/messagebox' component={MessageBox} />
+        <Route path='/admin/messageboxedit' component={MessageEdit} />
+        <Route path='/admin/contact' component={Contact} />
+
+        <Route path='/admin/messageEdit' component={MessageEdit} />
+        <Route path='/admin/ProductEdit' component={ProductEdit} />
+        <Route path='/admin/UserEdit' component={UserEdit} />
+        <Route path='/admin/zoneEdit' component={ZoneEdit} />
+        <Route path='/admin/brandEdit' component={BrandEdit} />
+        <Route path='/admin/personEdit' component={PersonEdit} />
+        <Route path='/admin/categoryEdit' component={CategoryEdit} />
+        <Route path='/admin/counter' component={Counter} />
+        <Route path='/admin/person' component={Person} />
+        <Route path='/admin/user' component={User} />
+        <Route path='/admin/zone' component={Zone} />
+        <Route path='/admin/fetch-data/:startDateIndex?' component={FetchData} />
+        <Route path='/admin/resource' component={Resource} />
+        <Route path='/admin/resourcelang' component={ResourceLang} />
+        <Route path='/admin/resourcelangedit' component={ResourceLangEdit} />
+        <Route path='/admin/resourceEdit' component={ResourceEdit} />
+
+        <Route path='/admin/HCPaymentType' component={HCPaymentType} />
+        <Route path='/admin/HCWOStatus' component={HCWOStatus} />
+        <Route path='/admin/HCShipStatus' component={HCShipStatus} />
+        <Route path='/admin/HCMessageTypeLang' component={HCMessageTypeLang} />
+        <Route path='/admin/HCShipType' component={HCShipType} />
+        <Route path='/admin/HCAssetHealthStatus' component={HCAssetHealthStatus} />
+        <Route path='/admin/HCAssetQuality' component={HCAssetQuality} />
+        <Route path='/admin/HCUnit' component={HCUnit} />
+        <Route path='/admin/HCAttributeTitle' component={HCAttributeTitle} />
+        <Route path='/admin/HCContactType' component={HCContactType} />
+        <Route path='/admin/HCAssetHealthStatusLang' component={HCAssetHealthStatusLang} />
+        <Route path='/admin/HCAssetQualityLang' component={HCAssetQualityLang} />
+        <Route path='/admin/HCUnitLang' component={HCUnitLang} />
+        <Route path='/admin/HCColor' component={HCColor} />
+        <Route path='/admin/HCDepType' component={HCDepType} />
+        <Route path='/admin/HCAttributeTitleLang' component={HCAttributeTitleLang} />
+        <Route path='/admin/HCZoneType' component={HCZoneType} />
+        <Route path='/admin/HCContactTypeLang' component={HCContactTypeLang} />
+        <Route path='/admin/HCShipVelicleType' component={HCShipVelicleType} />
+        <Route path='/admin/HCDepTypeLang' component={HCDepTypeLang} />
+        <Route path='/admin/HCAccountType' component={HCAccountType} />
+        <Route path='/admin/HCActionType' component={HCActionType} />
+        <Route path='/admin/HCPolicyTitle' component={HCPolicyTitle} />
+        <Route path='/admin/HCGender' component={HCGender} />
+        <Route path='/admin/HCPriority' component={HCPriority} />
+        <Route path='/admin/HCActionTypeLang' component={HCActionTypeLang} />
+        <Route path='/admin/HCDocType' component={HCDocType} />
+        <Route path='/admin/HCGenderLang' component={HCGenderLang} />
+        <Route path='/admin/HCPolicyTitleLang' component={HCPolicyTitleLang} />
+        <Route path='/admin/HCWHOperationStatus' component={HCWHOperationStatus} />
+        <Route path='/admin/HCLanguage' component={HCLanguage} />
+        <Route path='/admin/HCZoneTypeLang' component={HCZoneTypeLang} />
+        <Route path='/admin/HCSkillTitleLang' component={HCSkillTitleLang} />
+        <Route path='/admin/HCWHOperationType' component={HCWHOperationType} />
+        <Route path='/admin/HCCurrency' component={HCCurrency} />
+        <Route path='/admin/HCSkillTitle' component={HCSkillTitle} />
+        <Route path='/admin/HCCurrencyLang' component={HCCurrencyLang} />
+        <Route path='/admin/HCBookingStatus' component={HCBookingStatus} />
+        <Route path='/admin/HCResourceTypeLang' component={HCResourceTypeLang} />
+        <Route path='/admin/HCPelakCharacter' component={HCPelakCharacter} />
+        <Route path='/admin/HCWeekDay' component={HCWeekDay} />
+        <Route path='/admin/HCResourceType' component={HCResourceType} />
+        <Route path='/admin/HCJCOperationType' component={HCJCOperationType} />
+        <Route path='/admin/HCMessageType' component={HCMessageType} />
+        <Route path='/admin/HCUserTypeLang' component={HCUserTypeLang} />
+        <Route path='/admin/HCJCOperationTypeLang' component={HCJCOperationTypeLang} />
+        <Route path='/admin/HCUserType' component={HCUserType} />
+        <Route path='/admin/HCJobCardType' component={HCJobCardType} />
+        <Route path='/admin/HCJobCardTypeLang' component={HCJobCardTypeLang} />
+        <Route path='/admin/HCWHOperationStatusLang' component={HCWHOperationStatusLang} />
+        <Route path='/admin/HCWHOperationTypeLang' component={HCWHOperationTypeLang} />
+        <Route path='/admin/HCPaymentStatus' component={HCPaymentStatus} />
+        <Route path='/admin/HCMonth' component={HCMonth} />
+        <Route path='/admin/HCSelectionType' component={HCSelectionType} />
+
+        <Route path='/admin/HCOperationStatus' component={HCOperationStatus} />
+        <Route path='/admin/HCGuaranteeType' component={HCGuaranteeType} />
+        <Route path='/admin/HCHardCondition' component={HCHardCondition} />
+        <Route path='/admin/HCPlanTitle' component={HCPlanTitle} />
+        <Route path='/admin/HCPlanType' component={HCPlanType} />
+        <Route path='/admin/HCPredecessorType' component={HCPredecessorType} />
+        <Route path='/admin/HCQuestionTitle' component={HCQuestionTitle} />
+        <Route path='/admin/HCSurveyDomain' component={HCSurveyDomain} />
+        <Route path='/admin/HCSurveyParameter' component={HCSurveyParameter} />
+        <Route path='/admin/HCSurveyParameter' component={HCSurveyParameter} />
+
+        <Route path='/admin/HCPaymentTypeEdit' component={EditHCPaymentType} />
+        <Route path='/admin/HCWOStatusEdit' component={EditHCWOStatus} />
+        <Route path='/admin/HCShipStatusEdit' component={EditHCShipStatus} />
+        <Route path='/admin/HCMessageTypeLangEdit' component={EditHCMessageTypeLang} />
+        <Route path='/admin/HCShipTypeEdit' component={EditHCShipType} />
+        <Route path='/admin/HCAssetHealthStatusEdit' component={EditHCAssetHealthStatus} />
+        <Route path='/admin/HCAssetQualityEdit' component={EditHCAssetQuality} />
+        <Route path='/admin/HCUnitEdit' component={EditHCUnit} />
+        <Route path='/admin/HCAttributeTitleEdit' component={EditHCAttributeTitle} />
+        <Route path='/admin/HCContactTypeEdit' component={EditHCContactType} />
+        <Route path='/admin/HCAssetHealthStatusLangEdit' component={EditHCAssetHealthStatusLang} />
+        <Route path='/admin/HCAssetQualityLangEdit' component={EditHCAssetQualityLang} />
+        <Route path='/admin/HCUnitLangEdit' component={EditHCUnitLang} />
+        <Route path='/admin/HCColorEdit' component={EditHCColor} />
+        <Route path='/admin/HCDepTypeEdit' component={EditHCDepType} />
+        <Route path='/admin/HCAttributeTitleLangEdit' component={EditHCAttributeTitleLang} />
+        <Route path='/admin/HCZoneTypeEdit' component={EditHCZoneType} />
+        <Route path='/admin/HCContactTypeLangEdit' component={EditHCContactTypeLang} />
+        <Route path='/admin/HCShipVelicleTypeEdit' component={EditHCShipVelicleType} />
+        <Route path='/admin/HCDepTypeLangEdit' component={EditHCDepTypeLang} />
+        <Route path='/admin/HCAccountTypeEdit' component={EditHCAccountType} />
+        <Route path='/admin/HCActionTypeEdit' component={EditHCActionType} />
+        <Route path='/admin/HCPolicyTitleEdit' component={EditHCPolicyTitle} />
+        <Route path='/admin/HCGenderEdit' component={EditHCGender} />
+        <Route path='/admin/HCPriorityEdit' component={EditHCPriority} />
+        <Route path='/admin/HCActionTypeLangEdit' component={EditHCActionTypeLang} />
+        <Route path='/admin/HCDocTypeEdit' component={EditHCDocType} />
+        <Route path='/admin/HCGenderLangEdit' component={EditHCGenderLang} />
+        <Route path='/admin/HCPolicyTitleLangEdit' component={EditHCPolicyTitleLang} />
+        <Route path='/admin/HCWHOperationStatusEdit' component={EditHCWHOperationStatus} />
+        <Route path='/admin/HCLanguageEdit' component={EditHCLanguage} />
+        <Route path='/admin/HCZoneTypeLangEdit' component={EditHCZoneTypeLang} />
+        <Route path='/admin/HCSkillTitleLangEdit' component={EditHCSkillTitleLang} />
+        <Route path='/admin/HCWHOperationTypeEdit' component={EditHCWHOperationType} />
+        <Route path='/admin/HCCurrencyEdit' component={EditHCCurrency} />
+        <Route path='/admin/HCSkillTitleEdit' component={EditHCSkillTitle} />
+        <Route path='/admin/HCCurrencyLangEdit' component={EditHCCurrencyLang} />
+        <Route path='/admin/HCBookingStatusEdit' component={EditHCBookingStatus} />
+        <Route path='/admin/HCResourceTypeLangEdit' component={EditHCResourceTypeLang} />
+        <Route path='/admin/HCPelakCharacterEdit' component={EditHCPelakCharacter} />
+        <Route path='/admin/HCWeekDayEdit' component={EditHCWeekDay} />
+        <Route path='/admin/HCResourceTypeEdit' component={EditHCResourceType} />
+        <Route path='/admin/HCJCOperationTypeEdit' component={EditHCJCOperationType} />
+        <Route path='/admin/HCMessageTypeEdit' component={EditHCMessageType} />
+        <Route path='/admin/HCUserTypeLangEdit' component={EditHCUserTypeLang} />
+        <Route path='/admin/HCJCOperationTypeLangEdit' component={EditHCJCOperationTypeLang} />
+        <Route path='/admin/HCUserTypeEdit' component={EditHCUserType} />
+        <Route path='/admin/HCJobCardTypeEdit' component={EditHCJobCardType} />
+        <Route path='/admin/HCJobCardTypeLangEdit' component={EditHCJobCardTypeLang} />
+        <Route path='/admin/HCWHOperationStatusLangEdit' component={EditHCWHOperationStatusLang} />
+        <Route path='/admin/HCWHOperationTypeLangEdit' component={EditHCWHOperationTypeLang} />
+        <Route path='/admin/HCPaymentStatusEdit' component={EditHCPaymentStatus} />
+
+        <Route path='/admin/HCOperationStatusEdit' component={HCOperationStatusEdit} />
+        <Route path='/admin/HCGuaranteeTypeEdit' component={HCGuaranteeTypeEdit} />
+        <Route path='/admin/HCHardConditionEdit' component={HCHardConditionEdit} />
+        <Route path='/admin/HCPlanTypeEdit' component={HCPlanTypeEdit} />
+        <Route path='/admin/HCPlanTitleEdit' component={HCPlanTitleEdit} />
+        <Route path='/admin/HCPredecessorTypeEdit' component={HCPredecessorTypeEdit} />
+        <Route path='/admin/HCQuestionTitleEdit' component={HCQuestionTitleEdit} />
+        <Route path='/admin/HCSurveyDomainEdit' component={HCSurveyDomainEdit} />
+        <Route path='/admin/HCSurveyParameterEdit' component={HCSurveyParameterEdit} />
+        <Route path='/admin/HCPlanTitleLangEdit' component={HCPlanTitleLangEdit} />
+
+        <Route path='/admin/JobCard' component={JobCard} />
+        <Route path='/admin/JobCardEdit' component={JobCardEdit} />
+        <Route path='/admin/ShipRule' component={ShipRule} />
+        <Route path='/admin/ShipRuleEdit' component={ShipRuleEdit} />
+        <Route path='/admin/LoadDeliveryTimeTitle' component={LoadDeliveryTimeTitle} />
+        <Route path='/admin/LoadDeliveryTimeTitleEdit' component={LoadDeliveryTimeTitleEdit} />
+        <Route path='/admin/BillOfLading' component={BillOfLading} />
+        <Route path='/admin/BillOfLadingEdit' component={BillOfLadingEdit} />
+        <Route path='/admin/CurrencyExchange' component={CurrencyExchange} />
+        <Route path='/admin/CurrencyExchangeEdit' component={CurrencyExchangeEdit} />
+
+        <Route path='/admin/Assignment' component={Assignment} />
+        <Route path='/admin/AssignmentEdit' component={AssignmentEdit} />
+        <Route path='/admin/Booking' component={Booking} />
+        <Route path='/admin/BookingEdit' component={BookingEdit} />
+        <Route path='/admin/Stock' component={Stock} />
+        <Route path='/admin/StockEdit' component={StockEdit} />
+        <Route path='/admin/LoadDeliveryTTWeekDay' component={LoadDeliveryTTWeekDay} />
+        <Route path='/admin/LoadDeliveryTTWeekDayEdit' component={LoadDeliveryTTWeekDayEdit} />
+        <Route path='/admin/Payment' component={Payment} />
+        <Route path='/admin/PaymentEdit' component={PaymentEdit} />
+        <Route path='/admin/Account' component={Account} />
+        <Route path='/admin/AccountEdit' component={AccountEdit} />
+        <Route path='/admin/AssetSelectionType' component={AssetSelectionType} />
+        <Route path='/admin/AssetSelectionTypeEdit' component={AssetSelectionTypeEdit} />
+        <Route path='/admin/FAQ' component={FAQ} />
+        <Route path='/admin/FAQEdit' component={FAQEdit} />
+        <Route path='/admin/Guarantee' component={Guarantee} />
+        <Route path='/admin/GuaranteeEdit' component={GuaranteeEdit} />
+        <Route path='/admin/SurveySubject' component={SurveySubject} />
+        <Route path='/admin/SurveySubjectEdit' component={SurveySubjectEdit} />
+
+        <Route path='/admin/ChatManager' component={ChatManager} />
+        <Route path='/admin/CategorySelectionType' component={CategorySelectionType} />
+
+    </Layout>);
